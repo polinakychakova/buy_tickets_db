@@ -1,0 +1,33 @@
+{
+  "cashier": [
+    "authen_app.login_page",
+    "select.sql2",
+    "select",
+    "basket",
+    "basket.list_order_handler",
+    "basket.insert_ticket",
+    "basket.clear_basket_handler",
+    ""
+  ],
+  "master": [
+    "authen_app.login_page",
+    "select.sql1",
+    "select",
+    ""
+  ],
+  "admin": [
+    "authen_app.login_page",
+    "select",
+    "select.sql1",
+    "select.sql2",
+    "basket",
+    "basket.list_order_handler",
+    "basket.insert_ticket",
+    "basket.clear_basket_handler",
+    ""
+  ],
+  "unauthorised": [
+    "authen_app.login_page",
+    ""
+  ]
+}
