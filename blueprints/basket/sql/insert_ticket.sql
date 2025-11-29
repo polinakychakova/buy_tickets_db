@@ -1,0 +1,1 @@
+INSERT INTO flights.ticket(DATE_sell, Passenger_LastName, Passenger_FirstName, Pasport, idcashier, idDeparture) values ('$DATE_sell', '$Passenger_LastName', '$Passenger_FirstName','$Pasport','$idcashier','$idDeparture' )

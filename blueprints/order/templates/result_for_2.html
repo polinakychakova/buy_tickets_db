@@ -1,0 +1,30 @@
+<div align="center"><h1>Отчет по рейсам</h1></div>
+
+{% extends 'base.html' %}
+{% block example %}
+	{% if result %}
+		<table border="1">
+			<caption>Все вылеты {{str_info}}</caption>
+			<th><td>Дата вылета</td>
+			<td>Время вылета</td>
+			<td>Аэропорт вылета</td>
+			<td>Аэропорт прилета</td>
+			<td>День недели</td>
+			<td>Номер рейса</td></th>
+			<tr>
+			{% for line in result %}
+				<td></td>
+				{% for key, value in line.items() %}
+					<td>{{value}}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	{% else %}
+			<div> {{str}} </div>
+			<p>Проверьте корректность данных</p>
+    {% endif %}
+    <br><a href="/select">Назад к меню запросов</a>
+</div>
+{% endblock %}
+

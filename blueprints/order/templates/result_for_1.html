@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inf_pas_request</title>
+</head>
+<body>
+<div align="center"><h1>Пассажиры, купившие билет </h1></div>
+<div  align="center"> <h4>{{str_info}} </h4></div>
+{% extends 'base.html' %}
+{% block example %}
+    {% if result %}
+		<table border="1">
+		<caption>Билеты с заданным статусом и пунктом отправления</caption>
+		<th><td>Фамилия пассажира</td>
+		<td>Имя пассажира</td>
+		<td>Серия и номер паспорта</td>
+		<td>Дата отправления</td></th>
+		<tr>
+	    	{% for line in result %}
+	    		<td></td>
+		    	{% for key, value in line.items() %}
+		    		<td>{{value}}</td>
+		    	{% endfor %}
+	    		</tr>
+	    	{% endfor %}
+	{% else %}
+			<div> {{str}} </div>
+			<p>Проверьте корректность данных</p>
+    {% endif %}
+</table>
+    <br><a href="/select">Назад к меню запросов</a>
+</div>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% macro render_item(item, show_form=False) %}
+<div style="border-style: solid; border-color: #8c00ff; margin: 10px">
+    <p>
+        <span>Аэропорт отправления: {{item['Aeroport_DEPART']}}</span>
+        <br>
+        <span>Аэропорт прибытия: {{item['Aeroport_DEST']}}</span>
+        <br>
+        <span>Дата отправления: {{item['date_dep']}}</span>
+        <br>
+        <span>Время и день недели: {{item['time']}} {{item['day_of_week']}}</span>
+        <br>
+        <span>Цена: 150 </span>
+    </p>
+    {% if show_form %}
+    <div>
+        <form action="" method="post">
+            <input type="submit" value="Добавить">
+            <input type="hidden" name="idDeparture" value="{{item['idDeparture']}}">
+        </form>
+    </div>
+
+    {% endif %}
+</div>
+{% endmacro %}

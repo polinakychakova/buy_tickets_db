@@ -1,0 +1,15 @@
+{% extends 'base.html' %}}
+{% block example %}
+<div class="container">
+  Введите год продажи и идентификатор рейса <br> <br>
+  <form action="" method="post">
+    <input type=number placeholder="year_sell" name="year_sell" min="1999" max="2023">
+    <input type=text placeholder="flight_num" name="flight_num">
+    <input type=submit  name = "insert" value="Отправить">
+  </form>
+  <br>
+</div>
+    <br><a href="/">Назад</a>
+</div>    
+{% endblock %}
+

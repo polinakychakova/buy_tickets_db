@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+
+</head>
+<body>
+<div align="center"><a href="{{url_for('index')}}"><h4>В меню</h4></a></div>
+{% import 'basket_utils.html' as utils %}
+
+<div class="container" align="center">
+    <div class="row">
+            <h2>Список билетов</h2>
+            {% if items %}
+                {% for item in items %}
+                    {{ utils.render_item(item, show_form = True) }}
+                {% endfor %}
+            {% else %}
+                <p>Нет доступных билетов</p>
+            {% endif %}
+
+        </div>
+
+</body>
+</html>
